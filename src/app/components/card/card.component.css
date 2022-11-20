@@ -5,4 +5,38 @@
 
   display: flex;
   flex-direction: column;
+  background-color: #232323;
+  border-radius: 0.625rem;
 }
+
+.card__title {
+  margin: 0 auto;
+}
+
+.card__title > h3 {
+  color: white;
+}
+
+.card__body {
+  background-color: #616161;
+  width: 90%;
+  margin: 0 auto;
+  height: 70%;
+}
+
+.card__stats {
+  margin-top: 0.513rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.card__stats__type {
+  background-color: coral;
+  padding: 0.313rem;
+  border-radius: 0.313rem;
+
+}
+
+
+
