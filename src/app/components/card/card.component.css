@@ -32,6 +32,9 @@
 }
 
 .card__stats__type {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+
   background-color: coral;
   padding: 0.313rem;
   border-radius: 0.313rem;
