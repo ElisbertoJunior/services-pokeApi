@@ -1,6 +1,6 @@
 .card {
   border: 1px solid black;
-  max-width: 15.625rem;
+  max-width: 43.75rem;
   height: 21.875rem;
 
   display: flex;
@@ -22,10 +22,15 @@
   width: 90%;
   margin: 0 auto;
   height: 70%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card__stats {
   margin-top: 0.513rem;
+  margin-bottom: 0.513rem;
   display: flex;
   justify-content: center;
   gap: 0.25rem;
@@ -39,6 +44,11 @@
   padding: 0.313rem;
   border-radius: 0.313rem;
 
+}
+
+.card > input {
+  background-color: #232323;
+  color: aliceblue;
 }
 
 

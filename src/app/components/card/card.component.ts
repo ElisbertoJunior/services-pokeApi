@@ -10,7 +10,6 @@ import { Component, OnInit } from '@angular/core';
 
 export class CardComponent implements OnInit {
   pokemon: PokemonData
-  attributesTypes: string[] = ['FIRE', 'ROCK']
 
   constructor(private service: PokemonService) {
    this.pokemon = {
@@ -25,7 +24,11 @@ export class CardComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.service.getPokemon('pikachu').subscribe(
+    this.getPokemon('pikachu')
+  }
+
+  getPokemon(searchName: string) {
+    this.service.getPokemon(searchName).subscribe(
       {
         next: (res) => {
           this.pokemon = {
@@ -35,10 +38,9 @@ export class CardComponent implements OnInit {
             types: res.types
           }
 
-          console.log(this.pokemon)
 
         },
-        error: (err) => console.log(err)
+        error: (err) => console.log('not found')
       }
     )
   }
