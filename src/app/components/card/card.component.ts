@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
+
 export class CardComponent implements OnInit {
   name: string = 'Bulbassaur'
   attributesTypes: string[] = ['FIRE', 'ROCK']
@@ -16,7 +17,12 @@ export class CardComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.service.getPokemon('Pikachu')
+    this.service.getPokemon('pikachu').subscribe(
+      {
+        next: (res) => console.log(res),
+        error: (err) => console.log(err)
+      }
+    )
   }
 
 }
