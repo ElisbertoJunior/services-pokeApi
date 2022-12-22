@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
 import { PokemonData } from 'src/app/models/pokemonData'
-import { environment } from 'src/environments/environment'
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class PokemonService {
   private pokeData: PokemonData | any
 
   constructor(private http: HttpClient) {
-    this.baseURL = environment.pokeApi
+    this.baseURL = 'https://pokeapi.co/api/v2/pokemon/'
   }
 
   getPokemon(pokemonName: string):Observable<PokemonData> {
